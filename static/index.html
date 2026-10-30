@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7f2">
+  <title>Form & Fuel | Theo dõi sức khỏe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#dashboard" aria-label="Form and Fuel trang chủ">
+        <span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 16h18M10 11v10M22 11v10M5 13v6M27 13v6"/></svg></span>
+        <span class="brand-name">form<span>&</span>fuel<small>WELLNESS STUDIO</small></span>
+      </a>
+      <div class="side-label">MENU CHÍNH</div>
+      <nav class="nav-list" id="navigation"></nav>
+      <div class="sidebar-bottom">
+        <div class="coach-note"><span class="coach-icon">✳</span><p>Tiến bộ được tạo nên từ những lựa chọn nhỏ mỗi ngày.</p></div>
+        <button class="profile-button" id="profileButton" type="button"><span class="avatar">MA</span><span class="profile-copy"><b>Minh Anh</b><small>Gói hội viên</small></span><span class="profile-dots">···</span></button>
+      </div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Mở menu">☰</button>
+        <div class="breadcrumb"><span>Không gian của bạn</span><b>/</b><strong id="pageLabel">Tổng quan</strong></div>
+        <div class="top-actions"><span class="today-label" id="todayLabel"></span><span class="top-divider"></span><label class="role-control"><span>Chế độ</span><select id="roleSelect" aria-label="Chọn vai trò"><option value="HocVien">Học viên</option><option value="HLV">Huấn luyện viên</option><option value="Admin">Quản trị viên</option></select></label><button class="notification" aria-label="Thông báo"><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><i></i></button></div>
+      </header>
+      <div class="page-content" id="appContent"><div class="loading-state">Đang tải dữ liệu sức khỏe…</div></div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden><section class="modal" id="modal" role="dialog" aria-modal="true"></section></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

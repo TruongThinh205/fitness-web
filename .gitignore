@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+fitness.sqlite3
+fitness.sqlite3-shm
+fitness.sqlite3-wal
